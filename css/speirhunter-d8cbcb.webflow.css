@@ -6193,7 +6193,6 @@ figcaption {
   .image.cover {
     width: 833px;
     object-fit: contain;
-    margin-top: -126px;
     padding-top: 0;
     padding-bottom: 0;
   }
