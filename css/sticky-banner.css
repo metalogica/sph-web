@@ -1,0 +1,117 @@
+.sticky-banner {
+  position: fixed;
+  bottom: 0;
+
+  opacity: 1;
+
+  background-color: white;
+  width: 100vw;
+  height: 35vh;
+  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  strong {
+    color: #46a6ff;
+  }
+
+  @media (max-width: 775px) {
+    height: 90vh;
+    width: 100vw;
+
+    display: block;
+  }
+  
+  .ptc-logo {
+    max-width: 20%;
+    min-height: 28%;
+    object-fit: center;
+    
+    max-height: 100%;
+
+    @media (max-width: 775px) {
+      display: none;
+    }
+  }
+
+  .ptc-banner {
+    display: none;
+
+    @media (max-width: 775px) {
+      display: block;
+      position: absolute;
+      bottom: 0;
+
+      max-height: 33.5vh;
+      width: 100%;
+      object-fit: center;
+    }
+  }
+  
+  .sticky-banner-content-container {
+    
+    margin: 0;
+
+    max-width: 75%;
+
+    font-family: Metropolis, sans-serif;
+    font-size: 0.95rem;
+    color: #a1a6b0;
+
+    p {
+      /* overwriting style in main theme */
+      margin-bottom: 0;
+    }
+
+    @media (max-height: 600px) {
+      font-size: 0.79rem;
+      line-height: 18px;
+    }
+
+    @media (max-width: 760px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      margin: auto;
+      text-align: center;
+      padding-top: 11%;
+
+      @media (max-height: 740px) {
+        font-size: 0.79rem;
+      }
+    }
+  }
+
+  #sticky-banner-close-button {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+
+    cursor: pointer;
+
+    @media (max-width: 775px) {
+      top: 15px;
+      left: 15px;
+    }
+  }
+}
+
+.sticky-banner-fade-out {
+  animation: fadeOut 1s;
+  animation-fill-mode: forwards
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
